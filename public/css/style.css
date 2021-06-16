@@ -22,3 +22,9 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+h4 {
+  align-items: center;
+  text-decoration: underline;
+  margin-left: 23%;
+}
