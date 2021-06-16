@@ -14,11 +14,18 @@
     <h1>
       MVC Blog! Talk about Tech!
     </h1>
-    {{#if logged_in}}
     <nav>
-      <button class="btn" id="logout">logout</button>
+      <button class="btn"><a class="nav-link" href="/login">Login</a></button>
     </nav>
-    {{/if}}
+      <nav>
+      <button class="btn"><a class="nav-link" href="/profile">Profile</a></button>
+    </nav>
+    <nav>
+      <button class="btn"><a class="nav-link" href="/homepage">Home</a></button>
+    </nav>
+    <nav>
+      <button class="btn"><a class="nav-link" href="/logout">Logout</a></button>
+    </nav>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -30,6 +37,10 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  {{#unless logged_in}}
+  <script src="/js/login.js"></script>
+    {{/unless}}
+  
 </body>
 
 </html>
